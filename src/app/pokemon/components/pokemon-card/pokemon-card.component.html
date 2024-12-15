@@ -1,0 +1,8 @@
+<a [routerLink]="['/pokemon/by', pokemon().id]">
+  <img
+    [src]="spriteUrl()"
+    [alt]="pokemon().name + 'official artwork'"
+    loading="lazy"
+  />
+  <p>{{ pokemon().name | titlecase }}</p>
+</a>

@@ -1,0 +1,15 @@
+@if (pokemon() === undefined) {
+<pokemon-loader />
+}@else { @let info = pokemon()!;
+<h1>{{ info.name | titlecase }}</h1>
+<img
+  [src]="info.sprites.other?.['official-artwork']?.front_default"
+  [alt]="info.name + 'pokemon sprite'"
+/>
+
+@if (info.cries.legacy !== null) {
+<audio controls>
+  <source [src]="info.cries.latest" type="audio/wav" />
+  <source [src]="info.cries.legacy" type="audio/wav" />
+</audio>
+} }

@@ -1,0 +1,23 @@
+<h1>Pokedex</h1>
+<div>
+  <button
+    type="button"
+    (click)="updatePage(page() - 1)"
+    [disabled]="prevDisabled()"
+  >
+    Prev Page
+  </button>
+  <p>{{ page() + 1 }}</p>
+  <button
+    type="button"
+    (click)="updatePage(page() + 1)"
+    [disabled]="nextDisabled()"
+  >
+    Next Page
+  </button>
+</div>
+@if (pokemon().length) {
+<pokemon-list [pokemon]="pokemon()" />
+}@else {
+<div><pokemon-loader /></div>
+}

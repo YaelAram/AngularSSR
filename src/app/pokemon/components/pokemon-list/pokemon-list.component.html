@@ -1,0 +1,7 @@
+<article>
+  @for (item of pokemon(); track item.id) {
+  <pokemon-card [pokemon]="item" />
+  }@empty {
+  <p>There aren't pokemon to show</p>
+  }
+</article>

@@ -1,0 +1,19 @@
+ul {
+  margin: 0;
+  padding: 16px;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 700;
+}
